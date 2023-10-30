@@ -16,7 +16,7 @@ const Home = () => {
   const handleExtract = async () => {
     try {
       if (input !== "") {
-        const response = await fetch("http://localhost:8000/extract", {
+        const response = await fetch("https://geolexa.onrender.com/extract", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
