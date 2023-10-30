@@ -13,7 +13,8 @@ export const extractionController = async (req, res) => {
     Given an input- Which of the following saw the highest average temperature in January, Maharashtra, Ahmedabad or entire New-Zealand? 
     Output- 
     [{"token": "Maharashtra", "canonical_name": "Maharashtra", "table":"State"},{"token": "Ahmedabad", "canonical_name": "ahmedabad", "table": "City"},{"token": "New-Zealand", "canonical_name": "new zealand", "table": "Country"}]. 
-    Return the Output in this form, the given input is: ${sentence}`;
+    the given input is: ${sentence}
+    find the output like shown in the example and return only the json formatted array`;
     const data = await openai.completions.create({
       model: "gpt-3.5-turbo-instruct",
       prompt,
